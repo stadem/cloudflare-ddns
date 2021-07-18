@@ -58,7 +58,7 @@ class Cloudflare
     {
       case self::POST :
         curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($params));
         break;
       case self::PUT :
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
